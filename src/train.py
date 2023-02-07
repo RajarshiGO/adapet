@@ -85,7 +85,7 @@ def train(config):
     num_warmup_steps = config.num_batches * config.warmup_ratio
     scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps, config.num_batches)
 
-    for i in tqdm(range(tot_num_batches)):
+    for i in range(tot_num_batches):
         # Get true batch_idx
         batch_idx = (i // config.grad_accumulation_factor)
 

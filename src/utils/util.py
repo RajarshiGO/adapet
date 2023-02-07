@@ -11,8 +11,7 @@ import logging
 import re
 import sys
 
-global device #device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-device = "cpu"
+global device; device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 def set_global_logging_level(level=logging.ERROR, prefices=[""]):
     """
